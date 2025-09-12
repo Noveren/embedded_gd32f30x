@@ -1,0 +1,114 @@
+#ifndef __GD32F30X_LIBOPT_H
+#define __GD32F30X_LIBOPT_H
+
+#cmakedefine GD32F30X_USE_ADC
+#cmakedefine GD32F30X_USE_BKP
+#cmakedefine GD32F30X_USE_CAN
+#cmakedefine GD32F30X_USE_CRC
+#cmakedefine GD32F30X_USE_CTC
+#cmakedefine GD32F30X_USE_DAC
+#cmakedefine GD32F30X_USE_DBG
+#cmakedefine GD32F30X_USE_DMA
+#cmakedefine GD32F30X_USE_ENET
+#cmakedefine GD32F30X_USE_EXMC
+#cmakedefine GD32F30X_USE_EXTI
+#cmakedefine GD32F30X_USE_FWDGT
+#cmakedefine GD32F30X_USE_GPIO
+#cmakedefine GD32F30X_USE_I2C
+#cmakedefine GD32F30X_USE_PMU
+#cmakedefine GD32F30X_USE_RTC
+#cmakedefine GD32F30X_USE_SDIO
+#cmakedefine GD32F30X_USE_SPI
+#cmakedefine GD32F30X_USE_TIMER
+#cmakedefine GD32F30X_USE_USART
+#cmakedefine GD32F30X_USE_WWDGT
+
+#include "gd32f30x_fmc.h"
+#include "gd32f30x_misc.h"
+#include "gd32f30x_rcu.h"
+
+#ifdef GD32F30X_USE_ADC
+#include "gd32f30x_adc.h"
+#endif
+
+#ifdef GD32F30X_USE_BKP
+#include "gd32f30x_bkp.h"
+#endif
+
+#ifdef GD32F30X_USE_CAN
+#include "gd32f30x_can.h"
+#endif
+
+#ifdef GD32F30X_USE_CRC
+#include "gd32f30x_crc.h"
+#endif
+
+#ifdef GD32F30X_USE_CTC
+#include "gd32f30x_ctc.h"
+#endif
+
+#ifdef GD32F30X_USE_DAC
+#include "gd32f30x_dac.h"
+#endif
+
+#ifdef GD32F30X_USE_DBG
+#include "gd32f30x_dbg.h"
+#endif
+
+#ifdef GD32F30X_USE_DMA
+#include "gd32f30x_dma.h"
+#endif
+
+#ifdef GD32F30X_USE_ENET
+#include "gd32f30x_enet.h"
+#endif
+
+#ifdef GD32F30X_USE_EXMC
+#include "gd32f30x_exmc.h"
+#endif
+
+#ifdef GD32F30X_USE_EXTI
+#include "gd32f30x_exti.h"
+#endif
+
+#ifdef GD32F30X_USE_FWDGT
+#include "gd32f30x_fwdgt.h"
+#endif
+
+#ifdef GD32F30X_USE_GPIO
+#include "gd32f30x_gpio.h"
+#endif
+
+#ifdef GD32F30X_USE_I2C
+#include "gd32f30x_i2c.h"
+#endif
+
+#ifdef GD32F30X_USE_PMU
+#include "gd32f30x_pmu.h"
+#endif
+
+#ifdef GD32F30X_USE_RTC
+#include "gd32f30x_rtc.h"
+#endif
+
+#ifdef GD32F30X_USE_SDIO
+#include "gd32f30x_sdio.h"
+#endif
+
+#ifdef GD32F30X_USE_SPI
+#include "gd32f30x_spi.h"
+#endif
+
+#ifdef GD32F30X_USE_TIMER
+#include "gd32f30x_timer.h"
+#endif
+
+#ifdef GD32F30X_USE_USART
+#include "gd32f30x_usart.h"
+#endif
+
+#ifdef GD32F30X_USE_WWDGT
+#include "gd32f30x_wwdgt.h"
+#endif
+
+#endif
