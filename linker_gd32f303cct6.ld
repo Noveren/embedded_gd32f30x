@@ -9,8 +9,9 @@ MEMORY {
 }
 
 /* TODO Template */
-__STACK_SIZE = 0x00000400;
-__HEAP_SIZE  = 0x00001000;
+/* .data + .bss               12K */
+__STACK_SIZE = 0x00001800; /*  6K */
+__HEAP_SIZE  = 0x00007800; /* 30K */
 
 SECTIONS {
     .isr_vector : {
@@ -32,8 +33,15 @@ SECTIONS {
         *(.glue_7t)     /* glue thumb to arm code */
         *(.eh_frame)    /* exception handling code */
 
+        . = ALIGN(4);
         *(.rodata)
         *(.rodata*)
+
+        /* https://github.com/NevermindZZT/letter-shell */
+        . = ALIGN(4);
+        _shell_command_start = .;
+        KEEP(*(shellCommand))
+        _shell_command_end = .;
 
         . = ALIGN(4);
     } >FLASH
