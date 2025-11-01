@@ -20,14 +20,14 @@ project(
     LANGUAGES C ASM
 )
 
-set(DEVICE "UNKNOWN" CACHE STRING "GD32F303CCT6")
+set(DEVICE "UNKNOWN" CACHE STRING "Specify GD32F30x device")
 
 if(DEVICE STREQUAL "GD32F303CCT6")
     set(VAR_DEVICE_TYPE "GD32F30X_HD")
     set(VAR_STARTUP "${CMAKE_CURRENT_LIST_DIR}/startup_gd32f303cct6.S")
     set(VAR_LINKER_SCRIPT "${CMAKE_CURRENT_LIST_DIR}/linker_gd32f303cct6.ld")
 else()
-    message(FATAL_ERROR "Please select the specific device. GD32F303CCT6")
+    message(FATAL_ERROR "Please specify the device by DEVCIE. GD32F303CCT6")
 endif()
 
 option(GD32E23X_USE_ADC "" OFF)
